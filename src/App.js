@@ -1,11 +1,15 @@
 import React from "react";
 import "./styles.css";
+import { Container } from "reactstrap";
 
 export default function App() {
+  console.log("deneme");
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Container>
+      <div className="App">
+        <h1>Hello CodeSandbox</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </div>
+    </Container>
   );
 }
