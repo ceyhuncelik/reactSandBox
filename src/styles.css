@@ -1,3 +1,4 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -10,4 +11,10 @@
 
 .box1 > .text {
   color: blue;
+}
+
+.active {
+  background: blue;
+  color: white;
+  display: block;
 }
