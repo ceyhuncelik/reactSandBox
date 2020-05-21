@@ -18,3 +18,8 @@
   color: white;
   display: block;
 }
+
+li:disabled,
+li[disabled] {
+  background-color: aqua;
+}

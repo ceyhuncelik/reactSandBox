@@ -13,8 +13,6 @@ class UdemyDemo extends Component {
     };
   }
 
-  disabledCategory = () => {};
-
   render() {
     return (
       <Container>

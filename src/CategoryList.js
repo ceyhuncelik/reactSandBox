@@ -5,20 +5,49 @@ class CategoryList extends Component {
     super(props);
 
     this.state = {
-      categoryList: categoryData
+      categoryList: categoryData,
+      // ornek olsun diye ekliyorum
+      // ayakkabiDisabled: true,
+      disabledCategoryList: {}
     };
   }
+
+  //  bu alttaki gibi d,sabled categoriList icini oto doldurabilmemiz gerek ! msg den devam
+
+  disabledCategory = categoryName => {
+    // bad practice
+    // if (categoryName === 'Ayakkabı') {
+    //   this.setState({
+    //     ayakkabiDisabled: false
+    //   });
+    // }
+    const localDisabledCategoryList = {};
+    localDisabledCategoryList[categoryName] = false;
+    // yeni olusan degeri state e atıyoruz
+    debugger;
+    this.setState({ disabledCategoryList: localDisabledCategoryList });
+  };
+
   render() {
     const { categoryList } = this.state;
     return (
       <ul className="list-group">
         {categoryList.map(item => {
           return (
-            <li className="list-group-item">
+            <li
+              disabled={this.state.disabledCategoryList[item.categoryName]}
+              className="list-group-item"
+            >
               <a>{item.categoryName}</a>
               <div>
-                <button>Enabled</button>
-                <button disabled={this.state.disabled}>Disabled</button>
+                <button
+                  onClick={event => {
+                    this.disabledCategory(item.categoryName);
+                  }}
+                >
+                  Enabled
+                </button>
+                <button>Disabled</button>
               </div>
             </li>
           );
