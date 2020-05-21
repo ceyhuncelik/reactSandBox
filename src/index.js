@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-import App from "./App";
-import LifeCycleExamples from "./LifeCycleExamples";
+import "./styles.css";
+// import App from "./App";
+// import LifeCycleExamples from "./LifeCycleExamples";
+import UdemyDemo from "./UdemyDemo";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <LifeCycleExamples />
+    {/* <LifeCycleExamples /> */}
+    <UdemyDemo />
   </React.StrictMode>,
   rootElement
 );
