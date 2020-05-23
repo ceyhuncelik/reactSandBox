@@ -14,6 +14,8 @@ class UdemyDemo extends Component {
   }
 
   disabledCategory = () => {};
+  enabledCategory = () => {};
+  enabledCategory = () => {};
 
   render() {
     return (

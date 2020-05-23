@@ -18,3 +18,10 @@
   color: white;
   display: block;
 }
+
+a:disabled,
+a[disabled] {
+  background-color: aqua;
+  cursor: none;
+  pointer-events: none;
+}
